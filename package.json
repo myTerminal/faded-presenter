@@ -6,8 +6,7 @@
   "scripts": {
     "install": "node installer.js",
     "postinstall": "bower cache clean && bower install",
-    "develop": "grunt develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "grunt develop"
   },
   "repository": {
     "type": "git",

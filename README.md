@@ -26,6 +26,7 @@ Follow the instructions shown on the page.
 ## Dependencies
 
 * jQuery
+* Showdown
 
 ## Let me know
 
