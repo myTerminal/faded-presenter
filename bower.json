@@ -1,0 +1,42 @@
+{
+  "name": "faded-presenter",
+  "description": "A simple, light-weight presentation tool to present markdown documents as slide-shows",
+  "main": [
+    "index.html",
+    "scripts/main.js",
+    "scripts/faded-presenter.js",
+    "styles/faded-presenter.less"
+  ],
+  "authors": [
+    "Mohammed Ismail Ansari <team.terminal@gmail.com>"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "myTerminal",
+    "markdown",
+    "presentation"
+  ],
+  "homepage": "https://github.com/myTerminal/faded-presenter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/myTerminal/faded-presenter.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower.json",
+    "GruntFile.js",
+    "installer.js",
+    "package.json",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "showdown": "^1.4.2"
+  },
+  "moduleType": [
+    "globals"
+  ]
+}
