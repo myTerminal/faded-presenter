@@ -15,7 +15,7 @@ A simple, light-weight presentation tool to present markdown documents as slide-
 
 ## Features
 
-* Easy to use: drag-and-drop
+* Easy to use: drag-and-drop a markdown document, no need to remember commands
 * Less dependencies
 
 ## How to Use
