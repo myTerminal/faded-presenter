@@ -1,6 +1,6 @@
 # faded-presenter
 
-[![Bower version](https://badge.fury.io/bo/faded-presenter.svg)](https://badge.fury.io/bo/faded-presenter)  
+[![npm version](https://badge.fury.io/js/faded-presenter.svg)](https://badge.fury.io/js/faded-presenter)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-presenter.svg?branch=master)](https://travis-ci.org/myTerminal/faded-presenter)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-presenter.png)](https://codeclimate.com/github/myTerminal/faded-presenter)
 [![Coverage Status](https://img.shields.io/coveralls/myTerminal/faded-presenter.svg)](https://coveralls.io/r/myTerminal/faded-presenter?branch=master)  
