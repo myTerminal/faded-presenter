@@ -16,17 +16,24 @@ A simple, light-weight presentation tool to present markdown documents as slide-
 ## Features
 
 * Easy to use: drag-and-drop
-* Lesser dependencies
+* Less dependencies
 
 ## How to Use
 
-Open the web-page `index.html` in a web-browser that you want to present the slide-show in and drop a markdown file on the web-page.  
-Follow the instructions shown on the page.
+Open the web-page `index.html` in a web-browser that you want to present the slide-show in and drop a markdown file on the web-page.
+
+Move to the next and previous slides by pressing the scroll *Right* and *Left* keys on the keyboard.
 
 ## Dependencies
 
 * jQuery
 * Showdown
+
+## To-do
+
+* Display slide numbers
+* Display progress
+* More transition effects
 
 ## Let me know
 
