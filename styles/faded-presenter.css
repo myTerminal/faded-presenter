@@ -47,7 +47,7 @@ html body .slide {
   filter: alpha(opacity=0);
 }
 html body .slide.visible {
-  padding: 10px;
+  padding: 25px 50px;
   height: auto;
   min-height: 90%;
   border: 1px solid #FFF;
