@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/faded-presenter.svg)](https://badge.fury.io/js/faded-presenter)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-presenter.svg?branch=master)](https://travis-ci.org/myTerminal/faded-presenter)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-presenter.png)](https://codeclimate.com/github/myTerminal/faded-presenter)
+[![Package Quality](http://npm.packagequality.com/shield/faded-presenter.svg)](http://packagequality.com/#?package=faded-presenter)
 [![Coverage Status](https://img.shields.io/coveralls/myTerminal/faded-presenter.svg)](https://coveralls.io/r/myTerminal/faded-presenter?branch=master)  
 [![Dependency Status](https://david-dm.org/myTerminal/faded-presenter.svg)](https://david-dm.org/myTerminal/faded-presenter)
 [![devDependency Status](https://david-dm.org/myTerminal/faded-presenter/dev-status.svg)](https://david-dm.org/myTerminal/faded-presenter#info=devDependencies)
