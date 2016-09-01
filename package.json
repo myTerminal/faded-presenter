@@ -1,6 +1,6 @@
 {
   "name": "faded-presenter",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A simple, light-weight presentation tool to present markdown documents as slide-shows",
   "main": "index.html",
   "scripts": {

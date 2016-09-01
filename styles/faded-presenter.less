@@ -77,4 +77,23 @@ html {
             }
         }
     }
+
+    @media print {
+        height: auto;
+
+        body {
+            height: auto;
+            background-color: transparent;
+
+            .slide {
+                height: auto;
+                .opacity(1);
+
+                &:last-child {
+                    height: 0px;
+                    .opacity(0);
+                }
+            }
+        }
+    }
 }

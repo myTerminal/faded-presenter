@@ -55,3 +55,22 @@ html body .slide.visible {
   opacity: 1;
   filter: alpha(opacity=1);
 }
+@media print {
+  html {
+    height: auto;
+  }
+  html body {
+    height: auto;
+    background-color: transparent;
+  }
+  html body .slide {
+    height: auto;
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+  html body .slide:last-child {
+    height: 0px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
