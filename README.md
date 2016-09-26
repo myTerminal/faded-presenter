@@ -38,9 +38,3 @@ Move to the next and previous slides by pressing the scroll *Right* and *Left* k
 * Display slide numbers
 * Display progress
 * More transition effects
-
-## Let me know
-
-Let me know your suggestions on improving *faded-presenter* at ismail@teamfluxion.com
-
-Thank you!
