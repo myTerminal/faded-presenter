@@ -1,6 +1,7 @@
 # faded-presenter
 
-[![npm version](https://badge.fury.io/js/faded-presenter.svg)](https://badge.fury.io/js/faded-presenter)  
+[![npm version](https://badge.fury.io/js/faded-presenter.svg)](https://badge.fury.io/js/faded-presenter)
+[![npm downloads](https://img.shields.io/npm/dt/faded-presenter.svg)](https://www.npmjs.com/package/faded-presenter)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-presenter.svg?branch=master)](https://travis-ci.org/myTerminal/faded-presenter)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-presenter.png)](https://codeclimate.com/github/myTerminal/faded-presenter)
 [![Package Quality](http://npm.packagequality.com/shield/faded-presenter.svg)](http://packagequality.com/#?package=faded-presenter)
