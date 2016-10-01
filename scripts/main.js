@@ -26,7 +26,7 @@ function main () {
         
         reader.onload = function(event) {
             presenter = new FadedPresenter($("body"),
-                                           $("#presentation-container"),
+                                           $("#presentation"),
                                            converter.makeHtml(event.target.result));
         };
         

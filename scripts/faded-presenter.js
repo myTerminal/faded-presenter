@@ -51,14 +51,23 @@ var FadedPresenter = function (body, element, htmlText, options) {
         },
 
         showSlide = function () {
+            var progressPercentage =
+                    100 * (slideNumber + 1) / $("div.slide").length;
+
             $("div.slide").
                 removeClass("visible").
                 eq(slideNumber).
                 addClass("visible");
+
+            body.find("#presentation-progress-text").
+                text(progressPercentage + "%");
+
+            body.find("#presentation-progress-bar").
+                width(progressPercentage + "%");
         },
 
         bindEvents = function () {
-            element.on("keydown", function (e) {
+            body.on("keydown", function (e) {
                 if (e.keyCode === 39) {
                     nextSlide();
                 } else if (e.keyCode === 37) {

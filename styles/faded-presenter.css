@@ -31,7 +31,7 @@ html body #stage-container #stage:hover {
 html body #presentation-container {
   display: none;
 }
-html body #presentation-container .slide {
+html body #presentation-container #presentation .slide {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
@@ -49,7 +49,7 @@ html body #presentation-container .slide {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-html body #presentation-container .slide.visible {
+html body #presentation-container #presentation .slide.visible {
   padding: 25px 50px;
   height: auto;
   min-height: 90%;
@@ -57,6 +57,61 @@ html body #presentation-container .slide.visible {
   box-shadow: 0px 0px 5px #888;
   opacity: 1;
   filter: alpha(opacity=1);
+}
+html body #presentation-container #soft-edge {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 0px;
+  padding-top: 10px;
+}
+html body #presentation-container #soft-edge #overlays {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  background-color: Black;
+  opacity: 0.7;
+  filter: alpha(opacity=0.7);
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0px 0px 20px Black;
+}
+html body #presentation-container #soft-edge #overlays #presentation-progress-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+html body #presentation-container #soft-edge #overlays #presentation-progress-overlay #presentation-progress-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: Green;
+  opacity: 0.5;
+  filter: alpha(opacity=0.5);
+}
+html body #presentation-container #soft-edge #overlays #presentation-progress-overlay #presentation-progress-text-container {
+  display: table;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+html body #presentation-container #soft-edge #overlays #presentation-progress-overlay #presentation-progress-text-container #presentation-progress-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: White;
+}
+html body #presentation-container #soft-edge:hover #overlays {
+  margin-top: -100px;
 }
 html body.presentation-mode #stage-container {
   display: none;
@@ -72,12 +127,12 @@ html body.presentation-mode #presentation-container {
     height: auto;
     background-color: transparent;
   }
-  html body #presentation-container .slide {
+  html body #presentation-container #presentation .slide {
     height: auto;
     opacity: 1;
     filter: alpha(opacity=1);
   }
-  html body #presentation-container .slide:last-child {
+  html body #presentation-container #presentation .slide:last-child {
     height: 0px;
     opacity: 0;
     filter: alpha(opacity=0);
