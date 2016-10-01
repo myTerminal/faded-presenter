@@ -1,9 +1,12 @@
-var FadedPresenter = function (element, htmlText, options) {
+/* global $ */
+
+var FadedPresenter = function (body, element, htmlText, options) {
     var nice = null,
         slideNumber = 0,
         title,
 
         init = function () {
+            switchToPresentationMode();
             element.html(getSlideArray());
 
             title = $("h1").html();
@@ -11,6 +14,14 @@ var FadedPresenter = function (element, htmlText, options) {
 
             bindEvents();
             addLastSlide(title);
+        },
+
+        switchToPresentationMode = function () {
+            body.addClass("presentation-mode");
+        },
+
+        switchToSetupMode = function () {
+            body.removeClass("presentation-mode");
         },
 
         nextSlide = function () {
@@ -69,6 +80,8 @@ var FadedPresenter = function (element, htmlText, options) {
 
     return {
         init: init,
+        switchToPresentationMode: switchToPresentationMode,
+        switchToSetupMode: switchToSetupMode,
         nextSlide: nextSlide,
         previousSlide: previousSlide
     };

@@ -1,3 +1,5 @@
+/* global showdown, FileReader, FadedPresenter */
+
 var presenter,
     converter = new showdown.Converter();
 
@@ -24,6 +26,7 @@ function main () {
         
         reader.onload = function(event) {
             presenter = new FadedPresenter($("body"),
+                                           $("#presentation-container"),
                                            converter.makeHtml(event.target.result));
         };
         
