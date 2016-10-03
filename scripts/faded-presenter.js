@@ -52,7 +52,7 @@ var FadedPresenter = function (body, element, htmlText, options) {
 
         showSlide = function () {
             var progressPercentage =
-                    100 * (slideNumber + 1) / $("div.slide").length;
+                    Math.ceil(100 * (slideNumber + 1) / $("div.slide").length);
 
             $("div.slide").
                 removeClass("visible").
