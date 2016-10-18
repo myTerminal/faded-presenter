@@ -58,6 +58,11 @@ html body #presentation-container #presentation .slide.visible {
   opacity: 1;
   filter: alpha(opacity=1);
 }
+html body #presentation-container #presentation .footer {
+  border-top: 1px solid #000;
+  display: none;
+  text-align: center;
+}
 html body #presentation-container #soft-edge {
   position: fixed;
   bottom: 0px;
@@ -132,9 +137,15 @@ html body.presentation-mode #presentation-container {
     opacity: 1;
     filter: alpha(opacity=1);
   }
-  html body #presentation-container #presentation .slide:last-child {
+  html body #presentation-container #presentation .slide.last-slide {
     height: 0px;
     opacity: 0;
     filter: alpha(opacity=0);
+  }
+  html body #presentation-container #presentation .footer {
+    display: inherit;
+  }
+  html body #presentation-container #soft-edge {
+    display: none;
   }
 }

@@ -14,6 +14,7 @@ var FadedPresenter = function (body, element, htmlText, options) {
 
             bindEvents();
             addLastSlide(title);
+            addFooter();
         },
 
         switchToPresentationMode = function () {
@@ -78,9 +79,16 @@ var FadedPresenter = function (body, element, htmlText, options) {
 
         addLastSlide = function (title) {
             element.append("" +
-                           "<div class='slide'>" +
+                           "<div class='slide last-slide'>" +
                            "  <h1>" + title + "</h1>" +
                            "  Thanks for attending the session. Questions please..." +
+                           "</div>");
+        },
+
+        addFooter = function () {
+            element.append("" +
+                           "<div class='footer'>" +
+                           "  Printed from <a href='https://www.npmjs.com/package/faded-presenter'>faded-presenter</a>" +
                            "</div>");
         };
 

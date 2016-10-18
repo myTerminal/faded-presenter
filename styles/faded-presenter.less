@@ -81,6 +81,12 @@ html {
                         .opacity(1);
                     }
                 }
+
+                .footer {
+                    border-top: 1px solid #000;
+                    display: none;
+                    text-align: center;
+                }
             }
 
             #soft-edge {
@@ -170,11 +176,19 @@ html {
                         height: auto;
                         .opacity(1);
 
-                        &:last-child {
+                        &.last-slide {
                             height: 0px;
                             .opacity(0);
                         }
                     }
+
+                    .footer {
+                        display: inherit;
+                    }
+                }
+
+                #soft-edge {
+                    display: none;
                 }
             }
         }
