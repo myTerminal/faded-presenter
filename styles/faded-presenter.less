@@ -76,9 +76,9 @@ html {
                 .slide {
                     .box-sizing(border-box);
                     margin: 0 auto;
-                    padding: 0px;
+                    padding: 0;
                     max-width: 960px;
-                    height: 0px;
+                    height: 0;
                     overflow: hidden;
                     background-color: #FFF;
                     border: none;
@@ -89,7 +89,7 @@ html {
                         height: auto;
                         min-height: 90%;
                         border: 1px solid #FFF;
-                        box-shadow: 0px 0px 5px #888;
+                        box-shadow: 0 0 5px #888;
                     }
                 }
 
@@ -126,10 +126,10 @@ html {
 
             #soft-edge {
                 position: fixed;
-                bottom: 0px;
-                left: 0px;
+                bottom: 0;
+                left: 0;
                 width: 100%;
-                height: 0px;
+                height: 0;
                 padding-top: 10px;
 
                 #overlays {
@@ -140,7 +140,7 @@ html {
                     background-color: Black;
                     .opacity(0.7);
                     .transition(0.5s);
-                    box-shadow: 0px 0px 20px Black;
+                    box-shadow: 0 0 20px Black;
 
                     #presentation-controls-overlay {
                         position: relative;
@@ -150,7 +150,7 @@ html {
                         .controls-button {
                             float: left;
                             margin: 10px;
-                            margin-right: 0px;
+                            margin-right: 0;
                             padding: 5px;
                             height: 30px;
                             line-height: 16px;
@@ -188,8 +188,8 @@ html {
 
                         #presentation-progress-bar {
                             position: absolute;
-                            top: 0px;
-                            left: 0px;
+                            top: 0;
+                            left: 0;
                             width: 0%;
                             height: 100%;
                             background-color: Green;
@@ -199,8 +199,8 @@ html {
 
                         #presentation-progress-text-container {
                             display: table;
-                            top: 0px;
-                            left: 0px;
+                            top: 0;
+                            left: 0;
                             width: 100%;
                             height: 100%;
 
@@ -250,7 +250,7 @@ html {
                         .opacity(1);
 
                         &.last-slide {
-                            height: 0px;
+                            height: 0;
                             .opacity(0);
                         }
                     }
