@@ -42,12 +42,6 @@ html body #presentation-container #presentation .slide {
   background-color: #FFF;
   border: none;
   box-shadow: none;
-  -moz-transition: 1s opacity;
-  -webkit-transition: 1s opacity;
-  -o-transition: 1s opacity;
-  transition: 1s opacity;
-  opacity: 0;
-  filter: alpha(opacity=0);
 }
 html body #presentation-container #presentation .slide.visible {
   padding: 25px 50px;
@@ -55,8 +49,34 @@ html body #presentation-container #presentation .slide.visible {
   min-height: 90%;
   border: 1px solid #FFF;
   box-shadow: 0px 0px 5px #888;
+}
+html body #presentation-container #presentation.fade .slide {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transition: 1s opacity;
+  -webkit-transition: 1s opacity;
+  -o-transition: 1s opacity;
+  transition: 1s opacity;
+}
+html body #presentation-container #presentation.fade .slide.visible {
   opacity: 1;
   filter: alpha(opacity=1);
+}
+html body #presentation-container #presentation.zoom .slide {
+  -moz-transition: scale 1s;
+  -webkit-transition: scale 1s;
+  -o-transition: scale 1s;
+  transition: scale 1s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+html body #presentation-container #presentation.zoom .slide.visible {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 html body #presentation-container #presentation .footer {
   border-top: 1px solid #000;
@@ -85,12 +105,44 @@ html body #presentation-container #soft-edge #overlays {
   transition: 0.5s;
   box-shadow: 0px 0px 20px Black;
 }
-html body #presentation-container #soft-edge #overlays #presentation-progress-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 50px;
+}
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay .controls-button {
+  float: left;
+  margin: 10px;
+  margin-right: 0px;
+  padding: 5px;
+  height: 30px;
+  line-height: 16px;
+  border: 2px solid White;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay .controls-button:last-child {
+  margin-right: 10px;
+}
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay .controls-button:hover {
+  background-color: #808080;
+}
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay .controls-button.active {
+  background-color: #FFF;
+}
+html body #presentation-container #soft-edge #overlays #presentation-controls-overlay .controls-button.disabled {
+  cursor: default;
+}
+html body #presentation-container #soft-edge #overlays #presentation-progress-overlay {
+  position: relative;
+  width: 100%;
+  height: 50%;
 }
 html body #presentation-container #soft-edge #overlays #presentation-progress-overlay #presentation-progress-bar {
   position: absolute;
@@ -119,7 +171,8 @@ html body #presentation-container #soft-edge #overlays #presentation-progress-ov
   text-align: center;
   color: White;
 }
-html body #presentation-container #soft-edge:hover #overlays {
+html body #presentation-container #soft-edge:hover #overlays,
+html body #presentation-container #soft-edge.hovered #overlays {
   margin-top: -100px;
 }
 html body.presentation-mode #stage-container {

@@ -21,6 +21,13 @@
     box-sizing: @sizing;
 }
 
+.transform(@transform: none) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -69,8 +76,6 @@ html {
                     background-color: #FFF;
                     border: none;
                     box-shadow: none;
-                    .transition(1s opacity);
-                    .opacity(0);
 
                     &.visible {
                         padding: 25px 50px;
@@ -78,7 +83,30 @@ html {
                         min-height: 90%;
                         border: 1px solid #FFF;
                         box-shadow: 0px 0px 5px #888;
-                        .opacity(1);
+                    }
+                }
+
+                &.fade {
+
+                    .slide {
+                        .opacity(0);
+                        .transition(1s opacity);
+
+                        &.visible {
+                            .opacity(1);
+                        }
+                    }
+                }
+
+                &.zoom {
+
+                    .slide {
+                        .transition(scale 1s);
+                        .transform(scale(0));
+
+                        &.visible {
+                            .transform(scale(1));
+                        }
                     }
                 }
 
@@ -107,12 +135,49 @@ html {
                     .transition(0.5s);
                     box-shadow: 0px 0px 20px Black;
 
-                    #presentation-progress-overlay {
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
+                    #presentation-controls-overlay {
+                        position: relative;
                         width: 100%;
-                        height: 100%;
+                        height: 50px;
+
+                        .controls-button {
+                            float: left;
+                            margin: 10px;
+                            margin-right: 0px;
+                            padding: 5px;
+                            height: 30px;
+                            line-height: 16px;
+                            border: 2px solid White;
+                            .round-borders(5px);
+                            .transition(0.5s);
+                            cursor: pointer;
+
+                            &:last-child {
+                                margin-right: 10px;
+                            }
+
+                            &:hover {
+                                background-color: #808080;
+                            }
+
+                            &.active {
+                                background-color: #FFF;
+                            }
+
+                            &.disabled {
+                                cursor: default;
+                            }
+
+                            .animation-control {
+
+                            }
+                        }
+                    }
+
+                    #presentation-progress-overlay {
+                        position: relative;
+                        width: 100%;
+                        height: 50%;
 
                         #presentation-progress-bar {
                             position: absolute;
@@ -142,7 +207,7 @@ html {
                     }
                 }
 
-                &:hover {
+                &:hover, &.hovered {
                     #overlays {
                         margin-top: -100px;
                     }

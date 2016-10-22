@@ -4,6 +4,7 @@ var FadedPresenter = function (body, element, htmlText, options) {
     var nice = null,
         slideNumber = 0,
         title,
+        autoTransitionTimer,
 
         init = function () {
             switchToPresentationMode();
@@ -15,6 +16,11 @@ var FadedPresenter = function (body, element, htmlText, options) {
             bindEvents();
             addLastSlide(title);
             addFooter();
+            setDefaults();
+        },
+
+        setDefaults = function () {
+            body.find("#transition-fade").click();
         },
 
         switchToPresentationMode = function () {
@@ -41,6 +47,10 @@ var FadedPresenter = function (body, element, htmlText, options) {
 
             slideNumber--;
             showSlide();
+        },
+
+        autoTransitToNextSlide = function () {
+            nextSlide();
         },
 
         getSlideArray = function () {
@@ -74,6 +84,31 @@ var FadedPresenter = function (body, element, htmlText, options) {
                 } else if (e.keyCode === 37) {
                     previousSlide();
                 }
+            });
+
+
+            body.find("#auto-progress").click(function () {
+                if (autoTransitionTimer) {
+                    window.clearInterval(autoTransitionTimer);
+                    autoTransitionTimer = null;
+                    $(this).removeClass("active");
+                } else {
+                    autoTransitionTimer = window.setInterval(autoTransitToNextSlide, 5000);
+                    $(this).addClass("active");
+                }
+            });
+
+            body.find(".animation-control").click(function () {
+                var transition = this.id;
+
+                if (transition === "transition-fade") {
+                    element.removeClass("zoom").addClass("fade");
+                } else if (transition === "transition-zoom") {
+                    element.removeClass("fade").addClass("zoom");
+                }
+
+                body.find(".animation-control").removeClass("active");
+                $(this).addClass("active");
             });
         },
 
