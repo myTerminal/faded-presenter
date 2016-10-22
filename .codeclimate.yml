@@ -1,0 +1,5 @@
+languages:
+  JavaScript: true
+  CSS: true
+exclude_paths:
+- "styles/github-markdown.css"
