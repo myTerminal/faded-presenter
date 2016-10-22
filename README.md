@@ -22,7 +22,10 @@ A simple, light-weight presentation tool to present markdown documents as slide-
 
 * Easy to use: drag-and-drop a markdown document, no need to remember commands
 * Less dependencies
-* Check progress by moving mouse cursor near the bottom edge of the screen
+* Spawn more controls by moving mouse cursor near the bottom edge of the screen
+* Check presentation progress
+* Multiple selectable transition animations
+* Option to automatically perform slide transitions
 
 ## How to Use
 
