@@ -101,6 +101,10 @@ html body #presentation-container #soft-edge #overlays #presentation-progress-ov
   background-color: Green;
   opacity: 0.5;
   filter: alpha(opacity=0.5);
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 html body #presentation-container #soft-edge #overlays #presentation-progress-overlay #presentation-progress-text-container {
   display: table;
