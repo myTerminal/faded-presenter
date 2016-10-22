@@ -10,6 +10,13 @@
     transition: @seconds;
 }
 
+.transitions (@prop1: 1s, @prop2: 1s) {
+    -moz-transition: @prop1, @prop2;
+    -webkit-transition: @prop1, @prop2;
+    -o-transition: @prop1, @prop2;
+    transition: @prop1, @prop2;
+}
+
 .round-borders (@borderRadius: 5px) {
     -moz-border-radius: @borderRadius; 
     -webkit-border-radius: @borderRadius;
@@ -101,8 +108,8 @@ html {
                 &.zoom {
 
                     .slide {
-                        .transition(scale 1s);
-                        .transform(scale(0));
+                        .transitions(0.5s transform, 0.5s opacity);
+                        .transform(scale(0.7));
 
                         &.visible {
                             .transform(scale(1));

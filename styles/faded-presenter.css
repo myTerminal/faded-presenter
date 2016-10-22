@@ -63,14 +63,14 @@ html body #presentation-container #presentation.fade .slide.visible {
   filter: alpha(opacity=1);
 }
 html body #presentation-container #presentation.zoom .slide {
-  -moz-transition: scale 1s;
-  -webkit-transition: scale 1s;
-  -o-transition: scale 1s;
-  transition: scale 1s;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
+  -moz-transition: 0.5s transform, 0.5s opacity;
+  -webkit-transition: 0.5s transform, 0.5s opacity;
+  -o-transition: 0.5s transform, 0.5s opacity;
+  transition: 0.5s transform, 0.5s opacity;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
 }
 html body #presentation-container #presentation.zoom .slide.visible {
   -webkit-transform: scale(1);
