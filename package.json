@@ -4,7 +4,8 @@
   "description": "A simple, light-weight presentation tool to present markdown documents as slide-shows",
   "main": "index.html",
   "scripts": {
-    "install": "node installer.js",
+    "install-globals": "npm install -g grunt-cli bower",
+    "install": "npm run install-globals",
     "postinstall": "bower cache clean && bower install && grunt",
     "develop": "grunt develop"
   },
@@ -22,9 +23,6 @@
   ],
   "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
   "license": "GPL-3.0",
-  "dependencies": {
-    "package-script": "0.0.8"
-  },
   "devDependencies": {
     "grunt": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
