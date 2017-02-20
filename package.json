@@ -1,12 +1,11 @@
 {
   "name": "faded-presenter",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "A simple, light-weight presentation tool to present markdown documents as slide-shows",
   "main": "index.html",
   "scripts": {
     "install-globals": "npm install -g grunt-cli bower",
-    "install": "npm run install-globals",
-    "postinstall": "bower cache clean && bower install && grunt",
+    "get-vendors": "bower cache clean && bower install && grunt",
     "develop": "grunt develop"
   },
   "repository": {
@@ -25,7 +24,8 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "grunt": "~1.0.1",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-contrib-less": "~1.4.0"
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "~1.4.0",
+    "grunt-contrib-watch": "~1.0.0"
   }
 }
