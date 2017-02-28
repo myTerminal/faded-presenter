@@ -18,6 +18,8 @@
 
 A simple, light-weight presentation tool to present markdown documents as slide-shows
 
+You can try it online: [https://myTerminal.github.io/faded-presenter](https://myTerminal.github.io/faded-presenter)
+
 ## Features
 
 * Easy to use: drag-and-drop a markdown document, no need to remember commands
