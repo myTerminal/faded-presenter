@@ -1,4 +1,4 @@
-/* global showdown, FileReader, FadedPresenter */
+/* global showdown, FileReader, FadedPresenter $ */
 
 var presenter,
     converter = new showdown.Converter();

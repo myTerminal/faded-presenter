@@ -1,8 +1,7 @@
 /* global $ */
 
 var FadedPresenter = function (body, element, htmlText, options) {
-    var nice = null,
-        slideNumber = 0,
+    var slideNumber = 0,
         title,
         autoTransitionTimer,
 
@@ -55,15 +54,15 @@ var FadedPresenter = function (body, element, htmlText, options) {
 
         getSlideArray = function () {
             var bracedString = "<div class='slide visible'>" +
-                    htmlText.replace(/\<h2/g,
-                                     "</div><div class='slide'><h2") +
-                    "</div>";
+                htmlText.replace(/\<h2/g,
+                                 "</div><div class='slide'><h2") +
+                "</div>";
             return bracedString;
         },
 
         showSlide = function () {
             var progressPercentage =
-                    Math.ceil(100 * (slideNumber + 1) / $("div.slide").length);
+                Math.ceil(100 * (slideNumber + 1) / $("div.slide").length);
 
             $("div.slide").
                 removeClass("visible").
@@ -85,7 +84,6 @@ var FadedPresenter = function (body, element, htmlText, options) {
                     previousSlide();
                 }
             });
-
 
             body.find("#auto-progress").click(function () {
                 if (autoTransitionTimer) {
