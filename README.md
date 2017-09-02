@@ -11,7 +11,6 @@
 [![Dependency Status](https://david-dm.org/myTerminal/faded-presenter.svg)](https://david-dm.org/myTerminal/faded-presenter)
 [![devDependency Status](https://david-dm.org/myTerminal/faded-presenter/dev-status.svg)](https://david-dm.org/myTerminal/faded-presenter#info=devDependencies)
 [![peer Dependency Status](https://david-dm.org/myTerminal/faded-presenter/peer-status.svg)](https://david-dm.org/myTerminal/faded-presenter#info=peerDependencies)  
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 [![Gratipay](http://img.shields.io/gratipay/myTerminal.svg)](https://gratipay.com/myTerminal)  
 [![NPM](https://nodei.co/npm/faded-presenter.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/faded-presenter/)
