@@ -1,7 +1,8 @@
-/* global $ */
+/* global module, require */
 
-var FadedPresenter = function (body, element, htmlText, options) {
-    var slideNumber = 0,
+module.exports = function (body, element, htmlText, options) {
+    var $ = require('jquery'),
+        slideNumber = 0,
         title,
         autoTransitionTimer,
 

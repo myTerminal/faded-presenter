@@ -1,7 +1,10 @@
-/* global showdown, FileReader, FadedPresenter $ */
+/* global require, FileReader */
 
 var presenter,
-    converter = new showdown.Converter();
+    $ = require('jquery'),
+    showdown = require('showdown'),
+    converter = new showdown.Converter(),
+    FadedPresenter = require('./faded-presenter.js');
 
 $(document).ready(main);
 
