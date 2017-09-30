@@ -36,8 +36,8 @@ Move to the next and previous slides by pressing the scroll *Right* and *Left* k
 
 ## Dependencies
 
-* jQuery
-* Showdown
+* [jQuery](https://www.npmjs.com/package/jquery)
+* [Showdown](https://www.npmjs.com/package/showdown)
 
 ## To-do
 
