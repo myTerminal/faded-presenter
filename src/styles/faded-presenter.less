@@ -35,6 +35,18 @@
     transform: @transform;
 }
 
+.transform-origin(@transformOrigin: 50% 50%) {
+    -webkit-transform-origin: @transformOrigin;
+    -moz-transform-origin: @transformOrigin;
+    -ms-transform-origin: @transformOrigin;
+    transform-origin: @transformOrigin;
+}
+
+.perspective(@value: 500px) {
+    -webkit-perspective: @value;
+    perspective: @value;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -42,10 +54,11 @@ html {
     height: 100%;
 
     body {
-        margin: 10px;
+        margin: 0;
         padding: 0;
         height: 100%;
         position: relative;
+        overflow: hidden;
         background-color: #DDD;
 
         #stage-container {
@@ -70,24 +83,29 @@ html {
 
         #presentation-container {
             display: none;
+            height: 100%;
 
             #presentation {
+                .box-sizing(border-box);
+                .perspective(500px);
+                height: 100%;
+                padding: 10px;
 
                 .slide {
                     .box-sizing(border-box);
                     margin: 0 auto;
-                    padding: 0;
                     max-width: 960px;
-                    height: 0;
-                    overflow: hidden;
+                    overflow-y: scroll;
                     background-color: #FFF;
+
+                    height: 0;
+                    padding: 0;
                     border: none;
                     box-shadow: none;
 
                     &.visible {
                         padding: 25px 50px;
-                        height: auto;
-                        min-height: 90%;
+                        height: 100%;
                         border: 1px solid #FFF;
                         box-shadow: 0 0 5px #888;
                     }
@@ -96,11 +114,59 @@ html {
                 &.fade {
 
                     .slide {
-                        .opacity(0);
                         .transition(1s opacity);
+
+                        .opacity(0);
 
                         &.visible {
                             .opacity(1);
+                        }
+                    }
+                }
+
+                &.slide-up {
+
+                    .slide {
+                        .transition(1s);
+
+                        padding: 0px 50px;
+                        .opacity(0);
+
+                        &.visible {
+                            padding: 25px 50px;
+                            .opacity(1);
+                        }
+                    }
+                }
+
+                &.unfold-down {
+
+                    .slide {
+                        .transitions(0.5s transform, 0.5s opacity);
+                        .transform-origin(0% 0%);
+
+                        .opacity(0);
+                        .transform(scaleY(0));
+
+                        &.visible {
+                            .opacity(1);
+                            .transform(scaleY(1));
+                        }
+                    }
+                }
+
+                &.unfold-up {
+
+                    .slide {
+                        .transitions(0.5s transform, 0.5s opacity);
+                        .transform-origin(0% 100%);
+
+                        .opacity(0);
+                        .transform(scaleY(0));
+
+                        &.visible {
+                            .opacity(1);
+                            .transform(scaleY(1));
                         }
                     }
                 }
@@ -109,10 +175,24 @@ html {
 
                     .slide {
                         .transitions(0.5s transform, 0.5s opacity);
-                        .transform(scale(0.7));
+
+                        .transform(scale(0.5));
 
                         &.visible {
                             .transform(scale(1));
+                        }
+                    }
+                }
+
+                &.flip {
+
+                    .slide {
+                        .transitions(0.5s transform, 0.5s opacity);
+
+                        .transform(rotate3d(0, 1, 0, 180deg));
+
+                        &.visible {
+                            .transform(rotate3d(0, 0, 0, 0deg));
                         }
                     }
                 }
@@ -239,6 +319,7 @@ html {
 
         body {
             height: auto;
+            overflow: visible;
             background-color: transparent;
 
             #presentation-container {
@@ -247,7 +328,11 @@ html {
 
                     .slide {
                         height: auto;
-                        .opacity(1);
+                        padding: 0 !important;
+                        .opacity(1) !important;
+                        overflow: visible !important;
+                        box-shadow: none !important;
+                        border: none !important;
 
                         &.last-slide {
                             height: 0;

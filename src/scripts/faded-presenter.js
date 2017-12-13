@@ -100,10 +100,20 @@ module.exports = function (body, element, htmlText, options) {
             body.find(".animation-control").click(function () {
                 var transition = this.id;
 
+                element.removeClass("fade slide-up unfold-down unfold-up zoom flip");
+
                 if (transition === "transition-fade") {
-                    element.removeClass("zoom").addClass("fade");
+                    element.addClass("fade");
+                } else if (transition === "transition-slide-up") {
+                    element.addClass("slide-up");
+                } else if (transition === "transition-unfold-down") {
+                    element.addClass("unfold-down");
+                } else if (transition === "transition-unfold-up") {
+                    element.addClass("unfold-up");
                 } else if (transition === "transition-zoom") {
-                    element.removeClass("fade").addClass("zoom");
+                    element.addClass("zoom");
+                } else if (transition === "transition-flip") {
+                    element.addClass("flip");
                 }
 
                 body.find(".animation-control").removeClass("active");
