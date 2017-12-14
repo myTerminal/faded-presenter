@@ -21,7 +21,7 @@ You can try it online: [https://myTerminal.github.io/faded-presenter](https://my
 
 ## Features
 
-* Easy to use: drag-and-drop a markdown document, no need to remember commands
+* Easy to use: drag-and-drop a markdown document or click to reload the last one: no need to remember commands
 * Less dependencies
 * Spawn more controls by moving mouse cursor near the bottom edge of the screen
 * Check presentation progress
@@ -31,6 +31,8 @@ You can try it online: [https://myTerminal.github.io/faded-presenter](https://my
 ## How to Use
 
 Open the web-page `index.html` in a web-browser that you want to present the slide-show in and drop a markdown file on the web-page.
+
+You can also reload the most recent presentation by clicking on the page.
 
 Move to the next and previous slides by pressing the scroll *Right* and *Left* keys on the keyboard.
 

@@ -14,7 +14,8 @@ function main () {
     stage.ondragover = onDragOver;
     stage.ondrop = onDrop;
     stage.ondragend = onDragEnd;
-    
+    stage.onclick = onClick;
+
     function onDragOver () {
         this.className = 'hover';
         return false;
@@ -26,13 +27,15 @@ function main () {
 
         var file = e.dataTransfer.files[0],
             reader = new FileReader();
-        
+
         reader.onload = function(event) {
+            window.localStorage.lastPresentation = event.target.result;
+
             presenter = new FadedPresenter($("body"),
                                            $("#presentation"),
                                            converter.makeHtml(event.target.result));
         };
-        
+
         reader.readAsText(file);
         return false;
     };
@@ -41,4 +44,14 @@ function main () {
         this.className = '';
         return false;
     };
+
+    function onClick () {
+        var lastPresentation = window.localStorage.lastPresentation;
+
+        if (lastPresentation) {
+            presenter = new FadedPresenter($("body"),
+                                           $("#presentation"),
+                                           converter.makeHtml(lastPresentation));
+        }
+    }
 }
