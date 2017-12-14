@@ -20,7 +20,7 @@ module.exports = function (body, element, htmlText, options) {
         },
 
         setDefaults = function () {
-            body.find("#transition-fade").click();
+            body.find(".animation-control").eq(0).click();
         },
 
         switchToPresentationMode = function () {
@@ -98,23 +98,10 @@ module.exports = function (body, element, htmlText, options) {
             });
 
             body.find(".animation-control").click(function () {
-                var transition = this.id;
+                var transition = this.getAttribute('data-animation');
 
-                element.removeClass("fade slide-up unfold-down unfold-up zoom flip");
-
-                if (transition === "transition-fade") {
-                    element.addClass("fade");
-                } else if (transition === "transition-slide-up") {
-                    element.addClass("slide-up");
-                } else if (transition === "transition-unfold-down") {
-                    element.addClass("unfold-down");
-                } else if (transition === "transition-unfold-up") {
-                    element.addClass("unfold-up");
-                } else if (transition === "transition-zoom") {
-                    element.addClass("zoom");
-                } else if (transition === "transition-flip") {
-                    element.addClass("flip");
-                }
+                element[0].className = '';
+                element.addClass(transition);
 
                 body.find(".animation-control").removeClass("active");
                 $(this).addClass("active");
