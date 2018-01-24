@@ -73,9 +73,9 @@ html {
                 height: 100%;
                 text-align: center;
                 font-family: Arial;
+                cursor: default;
 
                 &:hover {
-                    cursor: pointer;
                     background: #00FF00;
                 }
             }
@@ -314,6 +314,63 @@ html {
             }
         }
 
+        #presenter-view-starter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #888;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-bottom-right-radius: 50%;
+            cursor: pointer;
+            .opacity(0);
+            .transition(1s);
+
+            &:hover {
+                .opacity(1);
+            }
+        }
+
+        #presenter-view-container {
+            display: none;
+
+            #presenter-view {
+                font-size: 0.5em;
+                background-color: #fff;
+
+                .slide {
+                    padding: 5px;
+                    border: 1px solid #777;
+                    .opacity(0.3);
+
+                    img {
+                        display: none;
+                    }
+
+                    h1,
+                    h2,
+                    h3 {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    &.active {
+                        background: #ddd;
+                        border-color: #0f0;
+                        .opacity(1);
+
+                        &+ .slide {
+                            .opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+
         &.presentation-mode {
 
             #stage-container {
@@ -321,6 +378,22 @@ html {
             }
 
             #presentation-container {
+                display: block;
+            }
+        }
+
+        &.presenter-view-mode {
+            overflow: inherit;
+
+            #stage-container {
+                display: none;
+            }
+
+            #presenter-view-starter {
+                display: none;
+            }
+
+            #presenter-view-container {
                 display: block;
             }
         }

@@ -2,6 +2,7 @@
 
 module.exports = function (body, element, htmlText, options) {
     var $ = require('jquery'),
+        intercom = window.Intercom.getInstance(),
         slideNumber = 0,
         title,
         autoTransitionTimer,
@@ -17,10 +18,6 @@ module.exports = function (body, element, htmlText, options) {
             addLastSlide(title);
             addFooter();
             setDefaults();
-        },
-
-        setDefaults = function () {
-            body.find(".animation-control").eq(0).click();
         },
 
         switchToPresentationMode = function () {
@@ -54,11 +51,10 @@ module.exports = function (body, element, htmlText, options) {
         },
 
         getSlideArray = function () {
-            var bracedString = "<div class='slide visible'>" +
+            return "<div class='slide visible'>" +
                 htmlText.replace(/\<h2/g,
                                  "</div><div class='slide'><h2") +
                 "</div>";
-            return bracedString;
         },
 
         showSlide = function () {
@@ -75,6 +71,10 @@ module.exports = function (body, element, htmlText, options) {
 
             body.find("#presentation-progress-bar").
                 width(progressPercentage + "%");
+
+            intercom.emit('slide-changed', {
+                slideIndex: slideNumber
+            });
         },
 
         bindEvents = function () {
@@ -121,6 +121,10 @@ module.exports = function (body, element, htmlText, options) {
                            "<div class='footer'>" +
                            "  Printed from <a href='https://www.npmjs.com/package/faded-presenter'>faded-presenter</a>" +
                            "</div>");
+        },
+
+        setDefaults = function () {
+            body.find(".animation-control").eq(0).click();
         };
 
     options = options || {};
