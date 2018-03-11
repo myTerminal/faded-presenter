@@ -4,7 +4,6 @@
 [![npm downloads](https://img.shields.io/npm/dt/faded-presenter.svg)](https://www.npmjs.com/package/faded-presenter)  
 [![Build Status](https://travis-ci.org/myTerminal/faded-presenter.svg?branch=master)](https://travis-ci.org/myTerminal/faded-presenter)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-presenter.png)](https://codeclimate.com/github/myTerminal/faded-presenter)
-[![Package Quality](http://npm.packagequality.com/shield/faded-presenter.svg)](http://packagequality.com/#?package=faded-presenter)
 [![Coverage Status](https://img.shields.io/coveralls/myTerminal/faded-presenter.svg)](https://coveralls.io/r/myTerminal/faded-presenter?branch=master)
 [![bitHound Overall Score](https://www.bithound.io/github/myTerminal/faded-presenter/badges/score.svg)](https://www.bithound.io/github/myTerminal/faded-presenter)
 [![bitHound Code](https://www.bithound.io/github/myTerminal/faded-presenter/badges/code.svg)](https://www.bithound.io/github/myTerminal/faded-presenter)  
