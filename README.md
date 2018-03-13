@@ -17,6 +17,8 @@ A simple, light-weight presentation tool to present markdown documents as slide-
 
 You can try it online: [https://myTerminal.github.io/faded-presenter](https://myTerminal.github.io/faded-presenter)
 
+> Try the newer [slide-gazer](https://github.com/team-fluxion/slide-gazer), a redesign with even more features
+
 ## Features
 
 * Easy to use: drag-and-drop a markdown document or click to reload the last one: no need to remember commands
