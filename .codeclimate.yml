@@ -2,4 +2,5 @@ languages:
   JavaScript: true
   CSS: true
 exclude_paths:
-- "styles/github-markdown.css"
+- "build"
+- "src/styles/github-markdown.css"
