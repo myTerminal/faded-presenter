@@ -20,7 +20,7 @@ You can try it online: [https://myTerminal.github.io/faded-presenter](https://my
 ## Features
 
 * Easy to use: drag-and-drop a markdown document or click to reload the last one: no need to remember commands
-* Less dependencies
+* Very few dependencies
 * Spawn more controls by moving mouse cursor near the bottom edge of the screen
 * Check presentation progress
 * Multiple selectable transition animations
