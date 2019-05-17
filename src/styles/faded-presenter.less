@@ -1,51 +1,4 @@
-.opacity (@opacity: 1) {
-    opacity: @opacity;
-    filter:alpha(opacity=@opacity);
-}
-
-.transition (@seconds: 1s) {
-    -moz-transition: @seconds;
-    -webkit-transition: @seconds;
-    -o-transition: @seconds;
-    transition: @seconds;
-}
-
-.transitions (@prop1: 1s, @prop2: 1s) {
-    -moz-transition: @prop1, @prop2;
-    -webkit-transition: @prop1, @prop2;
-    -o-transition: @prop1, @prop2;
-    transition: @prop1, @prop2;
-}
-
-.round-borders (@borderRadius: 5px) {
-    -moz-border-radius: @borderRadius; 
-    -webkit-border-radius: @borderRadius;
-    border-radius: @borderRadius;
-}
-
-.box-sizing (@sizing: border-box) {
-    -moz-box-sizing: @sizing;
-    box-sizing: @sizing;
-}
-
-.transform(@transform: none) {
-    -webkit-transform: @transform;
-    -moz-transform: @transform;
-    -ms-transform: @transform;
-    transform: @transform;
-}
-
-.transform-origin(@transformOrigin: 50% 50%) {
-    -webkit-transform-origin: @transformOrigin;
-    -moz-transform-origin: @transformOrigin;
-    -ms-transform-origin: @transformOrigin;
-    transform-origin: @transformOrigin;
-}
-
-.perspective(@value: 500px) {
-    -webkit-perspective: @value;
-    perspective: @value;
-}
+@import '../../node_modules/effortless-css/less/all.less';
 
 html {
     margin: 0;
@@ -142,7 +95,7 @@ html {
                 &.unfold-down {
 
                     .slide {
-                        .transitions(0.5s transform, 0.5s opacity);
+                        .transition(0.5s transform, 0.5s opacity);
                         .transform-origin(0% 0%);
 
                         .opacity(0);
@@ -158,7 +111,7 @@ html {
                 &.unfold-up {
 
                     .slide {
-                        .transitions(0.5s transform, 0.5s opacity);
+                        .transition(0.5s transform, 0.5s opacity);
                         .transform-origin(0% 100%);
 
                         .opacity(0);
@@ -174,7 +127,7 @@ html {
                 &.zoom {
 
                     .slide {
-                        .transitions(0.5s transform, 0.5s opacity);
+                        .transition(0.5s transform, 0.5s opacity);
 
                         .transform(scale(0.5));
 
@@ -187,7 +140,7 @@ html {
                 &.flip {
 
                     .slide {
-                        .transitions(0.5s transform, 0.5s opacity);
+                        .transition(0.5s transform, 0.5s opacity);
 
                         .transform(rotate3d(0, 1, 0, 180deg));
 
