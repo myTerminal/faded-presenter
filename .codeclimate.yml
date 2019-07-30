@@ -3,4 +3,5 @@ languages:
   CSS: true
 exclude_paths:
 - "build"
+- "gulpfile.js"
 - "src/styles/github-markdown.css"
