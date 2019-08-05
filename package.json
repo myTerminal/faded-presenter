@@ -20,7 +20,7 @@
     "presentation"
   ],
   "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "jquery": "3.2.1",
     "showdown": "1.7.3"
