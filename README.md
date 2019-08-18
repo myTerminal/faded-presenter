@@ -34,11 +34,6 @@ You can also reload the most recent presentation by clicking on the page.
 
 Move to the next and previous slides by pressing the scroll *Right* and *Left* keys on the keyboard.
 
-## Dependencies
-
-* [jQuery](https://www.npmjs.com/package/jquery)
-* [Showdown](https://www.npmjs.com/package/showdown)
-
 ## To-do
 
 * Display slide numbers
