@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "3.2.1",
-    "showdown": "1.7.3"
+    "showdown": "1.9.1"
   },
   "devDependencies": {
     "browserify": "14.4.0",
