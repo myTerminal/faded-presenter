@@ -119,7 +119,7 @@ module.exports = function (body, element, htmlText, options) {
         addFooter = function () {
             element.append("" +
                            "<div class='footer'>" +
-                           "  Printed from <a href='https://www.npmjs.com/package/faded-presenter'>faded-presenter</a>" +
+                           "  Printed from <a href='https://github.com/myTerminal/faded-presenter'>faded-presenter</a>" +
                            "</div>");
         },
 
