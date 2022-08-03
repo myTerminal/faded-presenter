@@ -3,9 +3,6 @@
 [![Build Status](https://travis-ci.org/myTerminal/faded-presenter.svg?branch=master)](https://travis-ci.org/myTerminal/faded-presenter)
 [![Code Climate](https://codeclimate.com/github/myTerminal/faded-presenter.png)](https://codeclimate.com/github/myTerminal/faded-presenter)
 [![Coverage Status](https://img.shields.io/coveralls/myTerminal/faded-presenter.svg)](https://coveralls.io/r/myTerminal/faded-presenter?branch=master)  
-[![Dependency Status](https://david-dm.org/myTerminal/faded-presenter.svg)](https://david-dm.org/myTerminal/faded-presenter)
-[![devDependency Status](https://david-dm.org/myTerminal/faded-presenter/dev-status.svg)](https://david-dm.org/myTerminal/faded-presenter#info=devDependencies)
-[![peer Dependency Status](https://david-dm.org/myTerminal/faded-presenter/peer-status.svg)](https://david-dm.org/myTerminal/faded-presenter#info=peerDependencies)  
 [![License](https://img.shields.io/github/license/myTerminal/ample-alerts.svg)](https://opensource.org/licenses/MIT)  
 
 A simple, light-weight presentation tool to present markdown documents as slide-shows
